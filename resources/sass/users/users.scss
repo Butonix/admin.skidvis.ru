@@ -1,0 +1,114 @@
+.check-all input.form-check-input {
+    position:     static;
+    margin-left:  -0.8rem;
+    margin-right: .4rem;
+    margin-top:   .4rem;
+}
+
+.container {
+    #find-fields {
+        @include media-breakpoint-up(xs) {
+            display: flex;
+        }
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
+
+        &--right-menu {
+            @include media-breakpoint-up(xs) {
+                display: none;
+            }
+            @include media-breakpoint-down(xs) {
+                display: flex;
+            }
+
+        }
+    }
+}
+
+#find-fields-open-button {
+    @include media-breakpoint-up(xs) {
+        display: none;
+    }
+    @include media-breakpoint-down(xs) {
+        display: flex;
+    }
+}
+
+.right-menu {
+    &__body.active {
+        //right:     0 !important;
+        //animation: fadeInRight 0.4s ease-in-out;
+        transform:  translateX(-100%);
+        box-shadow: 0 0 14px rgba(0, 0, 0, .25);
+    }
+
+    &__body {
+        background:  #fafafa;
+        //min-height: 100%;
+        top:         0;
+        bottom:      0;
+        position:    fixed;
+        z-index:     1000;
+        width:       90%;
+        right:       -90%; /* прячем меню */
+        box-shadow:  0 0 14px rgba(0, 0, 0, 0);
+        border-left: 1px solid #a1a1a1;
+        transition:  .3s;
+        transform:   translateX(0);
+
+        &-close {
+            color:    #636363;
+            position: absolute;
+            right:    0;
+            top:      0;
+        }
+
+        //.btn-group {
+        //    position: absolute;
+        //    bottom:   0;
+        //    left:     0;
+        //    right:    0;
+        //
+        //    .btn {
+        //        width: 50%;
+        //
+        //        &:first-child {
+        //            border-left:               0;
+        //            border-bottom:             0;
+        //            border-bottom-left-radius: 0;
+        //            border-top-left-radius:    0;
+        //        }
+        //        &:last-child {
+        //            border-right:               0;
+        //            border-bottom:              0;
+        //            border-bottom-right-radius: 0;
+        //            border-top-right-radius:    0;
+        //        }
+        //    }
+        //}
+    }
+}
+
+//
+//@keyframes fadeInRight {
+//    0% {
+//        right: -285px;
+//    }
+//    100% {
+//        right: 0;
+//    }
+//}
+
+.js-check-count {
+    .btn:first-child {
+        @include media-breakpoint-up(xs) {
+            border-bottom-right-radius: .25rem !important;
+            border-top-right-radius:    .25rem !important;
+        }
+        @include media-breakpoint-down(xs) {
+            border-bottom-right-radius: 0 !important;
+            border-top-right-radius:    0 !important;
+        }
+    }
+}

@@ -1,0 +1,155 @@
+.image-container {
+    .carousel {
+        border-radius: 15px;
+        overflow:      hidden;
+    }
+
+    #image-container-store {
+        display: none;
+    }
+}
+
+.thumb-file {
+    padding-top:  21px;
+    margin-right: 0;
+
+    &__wrapper {
+        width:         140px;
+        min-width:     140px;
+        min-height:    50px;
+        margin-bottom: 21px;
+        margin-right:  21px;
+        border-radius: 15px;
+    }
+
+    &__body {
+        label {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.cover-file {
+    height:       300px;
+    padding-top:  0;
+    margin-right: 0;
+
+    &__wrapper {
+        width:         100%;
+        height:        100%;
+        border-radius: 15px;
+    }
+
+    &__body {
+        label {
+            font-size: 5rem;
+        }
+    }
+}
+
+.icon-file {
+    width:       50px;
+    height:      50px;
+    padding-top: 0;
+    margin:      0 auto;
+
+    &__wrapper {
+        width:         100%;
+        height:        100%;
+        border-radius: 5px;
+    }
+
+    &__body {
+        border-radius: 5px !important;
+
+        label {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.icon-label-file {
+    width:       100px;
+    height:      100px;
+    padding-top: 0;
+    margin:      0 auto;
+
+    &__wrapper {
+        width:         100%;
+        height:        100%;
+        border-radius: 10px;
+    }
+
+    &__body {
+        border-radius: 10px !important;
+
+        label {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.thumb-file,
+.cover-file,
+.icon-file,
+.icon-label-file {
+    flex-wrap:       wrap;
+    display:         flex;
+    justify-content: center;
+
+    &__wrapper {
+        background-repeat:   no-repeat;
+        background-position: 50%;
+        background-size:     cover;
+
+        &--empty {
+            border: 1px dashed #929292;
+        }
+    }
+
+    &__body {
+        cursor:              pointer;
+        position:            relative;
+        height:              100%;
+        border:              1px dashed #929292;
+        border-radius:       15px;
+        display:             flex;
+        flex-direction:      row;
+        justify-content:     center;
+        align-items:         center;
+        background-position: 50%;
+        background-repeat:   no-repeat;
+        background-size:     cover;
+        overflow:            hidden;
+        box-shadow:          inset 0 0 16px rgba(0, 0, 0, 0.1);
+
+        label {
+            display:          none;
+            flex-direction:   row;
+            justify-content:  center;
+            align-items:      center;
+            background-color: rgba(0, 0, 0, .25);
+            color:            white;
+            cursor:           pointer;
+            margin:           0;
+            width:            100%;
+            height:           100%;
+        }
+
+        &__preview {
+            display: none;
+        }
+
+        &:hover {
+            border: 1px solid #929292;
+            cursor: pointer;
+
+            label {
+                display: flex;
+            }
+        }
+
+        &--empty {
+        }
+    }
+}
