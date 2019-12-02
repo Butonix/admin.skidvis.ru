@@ -73,7 +73,7 @@ class SocialAccount extends Model {
     /**
      * @return SocialNetwork
      */
-    public function getSocialNetwork(): SocialNetwork {
+    public function getSocialNetwork():? SocialNetwork {
         return $this->socialNetwork;
     }
 
@@ -81,14 +81,14 @@ class SocialAccount extends Model {
      * @return null|string
      */
     public function getSocialNetworkName(): ?string {
-        return $this->getSocialNetwork()->getName();
+        return $this->getSocialNetwork() !== null ? $this->getSocialNetwork()->getName(): null;
     }
 
     /**
      * @return null|string
      */
     public function getSocialNetworkIcon(): ?string {
-        return $this->getSocialNetwork()->getIconUrl();
+		return $this->getSocialNetwork() !== null ? $this->getSocialNetwork()->getIconUrl(): null;
     }
 
     /**
