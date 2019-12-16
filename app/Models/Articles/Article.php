@@ -131,7 +131,7 @@ class Article extends Model {
      * Количество слов в минуту
      * @var string
      */
-    protected $wordsPerMinute = 130;
+    protected $wordsPerMinute = 30;
 
     /**
      * Количество секунда на чтение одного изображения
